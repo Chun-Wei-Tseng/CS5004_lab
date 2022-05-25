@@ -1,0 +1,212 @@
+Last login: Tue May 24 17:13:25 on ttys002
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Waynes-MacBook-Pro:~ waynetseng$ pwd
+/Users/waynetseng
+Waynes-MacBook-Pro:~ waynetseng$ cd /Users/waynetseng/Documents/Northeastern\ University/lab03 
+Waynes-MacBook-Pro:lab03 waynetseng$ pwd
+/Users/waynetseng/Documents/Northeastern University/lab03
+Waynes-MacBook-Pro:lab03 waynetseng$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /Users/waynetseng/Documents/Northeastern University/lab03/.git/
+Waynes-MacBook-Pro:lab03 waynetseng$ git remote add origin https://github.com/Chun-Wei-Tseng/CS5004_lab.git
+Waynes-MacBook-Pro:lab03 waynetseng$ touch .gitignore
+Waynes-MacBook-Pro:lab03 waynetseng$ open .
+Waynes-MacBook-Pro:lab03 waynetseng$ open .
+Waynes-MacBook-Pro:lab03 waynetseng$ mkdir lab03
+Waynes-MacBook-Pro:lab03 waynetseng$ open .
+Waynes-MacBook-Pro:lab03 waynetseng$ ls
+lab03
+Waynes-MacBook-Pro:lab03 waynetseng$ open .
+Waynes-MacBook-Pro:lab03 waynetseng$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	.gitignore
+	.idea/
+	lab03/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Waynes-MacBook-Pro:lab03 waynetseng$ ls
+lab03
+Waynes-MacBook-Pro:lab03 waynetseng$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	.gitignore
+	.idea/
+	lab03/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Waynes-MacBook-Pro:lab03 waynetseng$ git add .
+Waynes-MacBook-Pro:lab03 waynetseng$ git commit -m "Project Initialized"
+[master (root-commit) ce36f7d] Project Initialized
+ Committer: Wayne Tseng <waynetseng@Waynes-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 11 files changed, 85 insertions(+)
+ create mode 100644 .DS_Store
+ create mode 100644 .gitignore
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+ create mode 100644 lab03/.idea/.gitignore
+ create mode 100644 lab03/.idea/misc.xml
+ create mode 100644 lab03/.idea/modules.xml
+ create mode 100644 lab03/.idea/vcs.xml
+ create mode 100644 lab03/lab03.iml
+Waynes-MacBook-Pro:lab03 waynetseng$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+Waynes-MacBook-Pro:lab03 waynetseng$ git push --set-upstream origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 1.86 KiB | 1.86 MiB/s, done.
+Total 11 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Chun-Wei-Tseng/CS5004_lab.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Waynes-MacBook-Pro:lab03 waynetseng$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	lab03/src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Waynes-MacBook-Pro:lab03 waynetseng$ git add .
+Waynes-MacBook-Pro:lab03 waynetseng$ git commit -m "Added Hello World"
+[master 7fb29fc] Added Hello World
+ Committer: Wayne Tseng <waynetseng@Waynes-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 5 insertions(+)
+ create mode 100644 lab03/src/Main.java
+Waynes-MacBook-Pro:lab03 waynetseng$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 527 bytes | 527.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Chun-Wei-Tseng/CS5004_lab.git
+   ce36f7d..7fb29fc  master -> master
+Waynes-MacBook-Pro:lab03 waynetseng$ git branch
+* master
+Waynes-MacBook-Pro:lab03 waynetseng$ git log
+commit 7fb29fc0673760100034365d506dc08239a504c1 (HEAD -> master, origin/master)
+Author: Wayne Tseng <waynetseng@Waynes-MacBook-Pro.local>
+Date:   Tue May 24 18:02:19 2022 -0700
+
+    Added Hello World
+
+commit ce36f7dc643d5d94c0908496ac7a81056edff477
+Author: Wayne Tseng <waynetseng@Waynes-MacBook-Pro.local>
+Date:   Tue May 24 17:52:06 2022 -0700
+
+    Project Initialized
+Waynes-MacBook-Pro:lab03 waynetseng$ git log --oneline
+7fb29fc (HEAD -> master, origin/master) Added Hello World
+ce36f7d Project Initialized
+Waynes-MacBook-Pro:lab03 waynetseng$ git pull
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.43 KiB | 292.00 KiB/s, done.
+From https://github.com/Chun-Wei-Tseng/CS5004_lab
+   7fb29fc..456fbfb  master     -> origin/master
+Updating 7fb29fc..456fbfb
+Fast-forward
+ README.md | 2 ++
+ READNE    | 1 +
+ 2 files changed, 3 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 READNE
+Waynes-MacBook-Pro:lab03 waynetseng$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .DS_Store
+	deleted:    READNE
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Waynes-MacBook-Pro:lab03 waynetseng$ git add .
+Waynes-MacBook-Pro:lab03 waynetseng$ git commit -m "Delete extra file"
+[master 2125603] Delete extra file
+ Committer: Wayne Tseng <waynetseng@Waynes-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 1 deletion(-)
+ delete mode 100644 READNE
+Waynes-MacBook-Pro:lab03 waynetseng$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 751 bytes | 751.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Chun-Wei-Tseng/CS5004_lab.git
+   456fbfb..2125603  master -> master
+Waynes-MacBook-Pro:lab03 waynetseng$ 
